@@ -25,10 +25,12 @@
 
 
         async function fillForm(){
-            const formUrl = 'https://1drv.ms/b/s!AkdTqJqc0f9KgSoHsQ738TmmPRO9?e=lErsZ8'
-            const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer())
+            //const formUrl = await PDFDocument.load(await readFile('emptyform.pdf'));
+            //const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer())
+            //
+            //
             
-            const pdfDoc = await PDFDocument.load(formPdfBytes)
+            const pdfDoc = await PDFDocument.load('emptyform.pdf')
 
             const form = pdfDoc.getForm()
 
