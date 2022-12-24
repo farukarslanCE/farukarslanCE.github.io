@@ -25,7 +25,7 @@
 
 
         async function fillForm(){
-            const formUrl = 'https://github.com/farukarslanCE/farukarslanCE.github.io/blob/main/emptyform.pdf'
+            const formUrl = 'emptyform.pdf'
             const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer())
             
             const pdfDoc = await PDFDocument.load(formPdfBytes)
