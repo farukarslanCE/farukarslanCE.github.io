@@ -69,24 +69,26 @@
         
         async function fillForm(){
 
-
-            const pdfDoc = await PDFDocument.load(await readFile('emptyform.pdf'))
+            const formUrl = 'emptyform.pdf'
+            const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer())
+            
+            const pdfDoc = await PDFDocument.load(formPdfBytes)
 
             const form = pdfDoc.getForm()
 
             //////////sdfasdfsdfsdf
             const nameField = form.getTextField('adi')
-            const adresField = form.getTextField('adres')
+            /*const adresField = form.getTextField('adres')
             const mailField = form.getTextField('eposta')
             const markaField = form.getTextField('marka')
             const tipField = form.getTextField('tip')
             const cinsField = form.getTextField('cins')
-            const plakaField = form.getTextField('plaka')
+            const plakaField = form.getTextField('plaka')*/
             const yilField = form.getTextField('modelyili')
             
 
             var isim=document.getElementById("fname").value
-            var adres=document.getElementById("fadres").value
+           /* var adres=document.getElementById("fadres").value
             var mail=document.getElementById("fmail").value
             var marka=document.getElementById("dmarka").value
             var tip=document.getElementById("dtip").value
@@ -94,17 +96,17 @@
             var sehir=document.getElementById("fplakasehir").value
             var harf=document.getElementById("fharfler").value
             var kod=document.getElementById("fkod").value
-            var yil=document.getElementById("fyil").value
+            var yil=document.getElementById("fyil").value*/
             
 
             nameField.setText(isim)
-            adresField.setText(adres)
+            /*adresField.setText(adres)
             mailField.setText(mail)
             markaField.setText(marka)
             tipField.setText(tip)
             cinsField.setText(cins)
             plakaField.setText(sehir + ' ' + harf + ' ' + kod)
-            yilField.setText(yil)
+            yilField.setText(yil)*/
 
             //SAVİNG MOTHERFR
 
