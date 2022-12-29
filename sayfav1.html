@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://unpkg.com/pdf-lib@1.11.0"></script>
+        <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="toolbar">
+            <ul class="yonetici">
+                <li><a href="adminpanel.html">Anasayfa</a></li>
+            </ul>
+
+        </div>
+        <form class="register-info">
+            <label for="kullanici" class="baslik">
+               <h2>Kullanıcı Bilgileri</h2> 
+            </label>
+            <div id="kullanici">
+
+                <label for="fname">
+                    İsim/Soyisim:
+                </label>
+                <input type="text" id="fname" placeholder="isim">
+
+                <label for="fadres">
+                    Adres:
+                </label>
+                <input type="text" id="fadres" placeholder="adres">
+                
+                <label for="fmail">
+                    E-Mail:
+                </label>
+                <input type="text" id="fmail" placeholder="mail">    
+                
+                <label for="fmail">
+                    Telefon:
+                </label>
+                <input type="text" id="ftel" placeholder="Telefon">   
+            </div>
+
+
+
+            <label for="arac-info" class="baslik">
+                <h2>Araç Bilgileri</h2> 
+            </label>
+            <div id="arac-info">
+
+                <label for="dmarka">
+                    Araç Markası:
+                </label>
+                <input type="text" id="dmarka" placeholder="Marka">
+
+                <label for="dtip">
+                    Araç Tipi:
+                </label>
+                <input type="text" id="dtip" placeholder="Araç Tip">
+                
+                <label for="fcins">
+                    Kullanım Cinsi:
+                </label>
+                <input type="text" id="fcins" placeholder="Hususi">    
+                <div id="dplaka">
+                <label for="dplaka">
+                    Plaka:
+                </label>
+                    <select id="fplakasehir" name="sehir">
+                        <option value="01"></option>
+                        <option value="02"></option>
+                        <option value="03"></option>
+                        <option value="04"></option>
+                        <option value="05"></option>
+                        <option value="06"></option>
+                        <option value="07"></option>
+                        <option value="08"></option>
+                        <option value="09"></option>
+                    </select>                    
+                    <input type="text" id="fharfler" placeholder="">  
+                    <input type="text" id="fkod" placeholder="">                      
+                </div>
+                <label for="fyil">
+                    Araç Yılı:
+                </label>
+                <input type="text" id="fyil" placeholder="">
+                                  
+            </div>
+            <input type="submit" id="boton">
+            
+            
+        </form>
+    </body>
+</html>
